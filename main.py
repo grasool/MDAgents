@@ -20,6 +20,8 @@ parser.add_argument('--num_samples', type=int, default=100)
 args = parser.parse_args()
 
 model, client = setup_model(args.model)
+# test_qa, examplers = load_data(r'D:\Works\SomeCodes\MDAgents\data\medqa\test.jsonl')
+# print(args.dataset)
 test_qa, examplers = load_data(args.dataset)
 
 agent_emoji = ['\U0001F468\u200D\u2695\uFE0F', '\U0001F468\U0001F3FB\u200D\u2695\uFE0F', '\U0001F469\U0001F3FC\u200D\u2695\uFE0F', '\U0001F469\U0001F3FB\u200D\u2695\uFE0F', '\U0001f9d1\u200D\u2695\uFE0F', '\U0001f9d1\U0001f3ff\u200D\u2695\uFE0F', '\U0001f468\U0001f3ff\u200D\u2695\uFE0F', '\U0001f468\U0001f3fd\u200D\u2695\uFE0F', '\U0001f9d1\U0001f3fd\u200D\u2695\uFE0F', '\U0001F468\U0001F3FD\u200D\u2695\uFE0F']
